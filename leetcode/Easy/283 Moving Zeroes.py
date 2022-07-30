@@ -36,16 +36,25 @@ class Solution:
         # This method does not work either because the question was unclear on whether there could be duplicates in the array
 
         # Find first non-zero iteratively
-        ordered = 0
-        if nums.count(0) != 0:
-            for i in range(len(nums)):
-                if nums[ordered] != 0 and ordered > nums.index(0):
-                    nums[nums.index(0)], nums[ordered] = nums[ordered], nums[nums.index(0)]
-                ordered += 1
+        # ordered = 0
+        # if nums.count(0) != 0:
+        #     for i in range(len(nums)):
+        #         if nums[ordered] != 0 and ordered > nums.index(0):
+        #             nums[nums.index(0)], nums[ordered] = nums[ordered], nums[nums.index(0)]
+        #         ordered += 1
+
+        # I just found out that you don't have to use swap; you can do array transformations but not reassignments
+        for i in range(nums.count(0)):
+            nums.remove(0)
+            nums.append(0)
 
 """
 --- Submission ---
+1. 
+Runtime: 7443 ms, faster than 5.01% of Python3 online submissions for Move Zeroes.  Time: O(n)
+Memory Usage: 15.4 MB, less than 96.90% of Python3 online submissions for Move Zeroes.  Space: O(1)
 
-Runtime: 7443 ms, faster than 5.01% of Python3 online submissions for Move Zeroes.
-Memory Usage: 15.4 MB, less than 96.90% of Python3 online submissions for Move Zeroes.
+2.
+Runtime: 632 ms, faster than 17.74% of Python3 online submissions for Move Zeroes. Time: O(n)
+Memory Usage: 15.5 MB, less than 65.60% of Python3 online submissions for Move Zeroes. Space: O(1)
 """
