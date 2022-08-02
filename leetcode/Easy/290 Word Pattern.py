@@ -30,6 +30,20 @@ class Solution:
         #                 print(False)
         # Apparently this method is slow as shit
 
+
+        pattern_storage = {}
+        if len(pattern) != len(s.split()):
+            return False
+        for iteration, letter in enumerate(pattern):
+            if not letter in pattern_storage:
+                pattern_storage[letter] = s.split()[iteration]
+            else:
+                if s.split()[iteration] != pattern_storage[letter]:
+                    return False
+        if len(pattern_storage.values()) != len(set(pattern_storage.values())):
+            return False
+        return True
+
 """
 --- Submission ---
 
@@ -37,4 +51,7 @@ class Solution:
 Runtime: 96 ms, faster than 5.38% of Python3 online submissions for Word Pattern.
 Memory Usage: 13.9 MB, less than 23.23% of Python3 online submissions for Word Pattern.
 
+2.
+Runtime: 37 ms, faster than 79.68% of Python3 online submissions for Word Pattern.
+Memory Usage: 13.8 MB, less than 74.38% of Python3 online submissions for Word Pattern.
 """
