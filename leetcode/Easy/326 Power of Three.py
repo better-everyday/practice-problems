@@ -1,6 +1,5 @@
 # type:ignore
 from math import log
-from tkinter.font import nametofont
 """
 --- Description ---
 
@@ -22,22 +21,27 @@ class Solution:
         # return True
 
         # Recursion
-        def power(n):
-            if n == 1:
-                return True
-            n /= 3
-            if not n % 1 == 0:
-                return False
+        # def power(n):
+        #     if n == 1:
+        #         return True
+        #     n /= 3
+        #     if not n % 1 == 0:
+        #         return False
 
-            return power(n)
+        #     return power(n)
 
+        # if n < 1 or n == 2:
+        #     return False
+
+        # return power(n)
+
+        # No loop/recursion
         if n < 1 or n == 2:
             return False
-
-        return power(n)
+        return log(n, 3) % 1 < 0.000000000000001 or log(n, 3) % 1 > 0.999999999999999
 
 obj = Solution
-if obj.isPowerOfThree(obj, 243):
+if obj.isPowerOfThree(obj, 45):
     print(True)
 else:
     print(False)
