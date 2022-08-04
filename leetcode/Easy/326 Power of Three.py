@@ -27,12 +27,9 @@ class Solution:
         #     n /= 3
         #     if not n % 1 == 0:
         #         return False
-
         #     return power(n)
-
         # if n < 1 or n == 2:
         #     return False
-
         # return power(n)
 
         # No loop/recursion
