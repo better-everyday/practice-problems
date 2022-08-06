@@ -25,6 +25,6 @@ class Solution:
 """
 --- Submission ---
 
-Runtime: 51 ms, faster than 60.34% of Python3 online submissions for Longest Common Prefix.
-Memory Usage: 14.1 MB, less than 12.01% of Python3 online submissions for Longest Common Prefix.
+Runtime: 36 ms, faster than 92.35% of Python3 online submissions for Longest Common Prefix.
+Memory Usage: 13.9 MB, less than 88.43% of Python3 online submissions for Longest Common Prefix.
 """
