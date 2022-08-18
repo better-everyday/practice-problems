@@ -43,16 +43,28 @@ class Solution:
         # return new_head
 
         # 2. Recursion
-        def check(head, val):
-            if head:
-                if head.val == val:
-                    head = check(head.next, val)
-                else:
-                    head.next = check(head.next, val)
+        # def check(head, val):
+        #     if head:
+        #         if head.val == val:
+        #             head = check(head.next, val)
+        #         else:
+        #             head.next = check(head.next, val)
+        #     return head
+        # return check(head, val)
 
-            return head
-
-        return check(head, val)
+        # 3. Better iterative
+        res = ListNode()      
+        res_iter = res
+        iterator = head
+        while iterator:
+            if iterator.val != val:
+				# As long as the value of node is different than target, add list starting from this Node
+                res_iter.next = iterator
+                res_iter = res_iter.next
+            iterator = iterator.next
+			# Set res_iter.next to None, so we're adding only Node we processed
+            res_iter.next = None
+        return res.next
 
 """
 --- Submission ---
