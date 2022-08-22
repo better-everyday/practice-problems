@@ -17,8 +17,8 @@ class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         
         def traverse(root):
-            l = 0
-            r = 0
+            l = 1
+            r = 1
             
             if root.left != None:
                 l = 1 + traverse(root.left)
