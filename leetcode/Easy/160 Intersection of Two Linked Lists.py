@@ -17,6 +17,8 @@ class ListNode:
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         
+        # 1.
+        """
         def traverse(head, list):
             if head:
                 list.append(head.val)
@@ -52,10 +54,41 @@ class Solution:
                 else:
                     intA += ".next"
                     intB += ".next"
+        """
+
+        # 2.
+        def traverse(head):
+            l = 0
+            while head:
+                l += 1
+                head = head.next
+            return l
+
+        lA, lB = traverse(headA), traverse(headB)
+
+        skip = abs(lB-lA)
+        
+        if lB > lA:
+            for x in range(skip):
+                headB = headB.next
+        else:
+            for x in range(skip):
+                headA = headA.next
+            
+        for x in range(lA):
+            if headA == headB: return headA
+            else:
+                headA = headA.next
+                headB = headB.next
 
 """
 --- Submission ---
 
+1.
 Runtime: 193 ms, faster than 76.41% of Python3 online submissions for Intersection of Two Linked Lists.
 Memory Usage: 39.5 MB, less than 6.13% of Python3 online submissions for Intersection of Two Linked Lists.
+
+2.
+Runtime: 168 ms, faster than 90.67% of Python3 online submissions for Intersection of Two Linked Lists.
+Memory Usage: 29.6 MB, less than 69.73% of Python3 online submissions for Intersection of Two Linked Lists.
 """
