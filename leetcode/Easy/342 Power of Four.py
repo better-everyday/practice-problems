@@ -28,9 +28,11 @@ class Solution:
 """
 --- Submission ---
 
+# Cheat
 Runtime: 34 ms, faster than 91.81% of Python3 online submissions for Power of Four.
 Memory Usage: 13.8 MB, less than 54.38% of Python3 online submissions for Power of Four.
 
+# Proper
 Runtime: 30 ms, faster than 96.09% of Python3 online submissions for Power of Four.
 Memory Usage: 13.8 MB, less than 54.38% of Python3 online submissions for Power of Four.
 """
