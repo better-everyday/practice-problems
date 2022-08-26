@@ -20,12 +20,17 @@ class Solution:
         """
 
         # 2
-        for x in range(len(s)):
+        for x in range(len(s)//2):
             s[x], s[-x-1] = s[-x-1], s[x]
 
 """
 --- Submission ---
 
+1.
 Runtime: 1174 ms, faster than 5.04% of Python3 online submissions for Reverse String.
 Memory Usage: 18.5 MB, less than 45.70% of Python3 online submissions for Reverse String.
+
+2.
+Runtime: 256 ms, faster than 73.52% of Python3 online submissions for Reverse String.
+Memory Usage: 18.4 MB, less than 86.20% of Python3 online submissions for Reverse String.
 """
