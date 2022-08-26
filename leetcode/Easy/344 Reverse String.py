@@ -12,9 +12,16 @@ class Solution:
         Do not return anything, modify s in-place instead.
         """
         
+        # 1
+        """
         for n in range(len(s)-1):
             popped = s.pop(0)
             s.insert(len(s)-n, popped)
+        """
+
+        # 2
+        for x in range(len(s)):
+            s[x], s[-x-1] = s[-x-1], s[x]
 
 """
 --- Submission ---
