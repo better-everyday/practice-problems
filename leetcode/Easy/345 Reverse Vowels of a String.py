@@ -10,26 +10,26 @@ class Solution:
     def reverseVowels(self, s: str) -> str:
 
         # 1 List (WIP)
-        """
         s = list(s)
         left, right = 0, -1
-        vowels = "aeiou"
+        vowels = "aeiouAEIOU"
 
-        for x in range(len([i for i in s if i in vowels])//2):
-            if s[left] not in vowels and s[right] not in vowels:
+        count = 0
+        while count < len([i for i in s if i in vowels])//2:
+            while s[left] not in vowels:
                 left += 1
+            while s[right] not in vowels:
                 right -= 1
-            elif s[left] not in vowels:
-                left += 1
-            elif s[right] not in vowels:
-                right -= 1
-            else:
+            if s[left] != s[right]:
                 s[left], s[right] = s[right], s[left]
+            left += 1
+            right -= 1
+            count += 1
         
         return "".join(s)
-        """
 
         # 2 Adding
+        """
         string = ""
         vowels = "aeiouAEIOU"
 
@@ -44,6 +44,9 @@ class Solution:
                 string += strip.pop(0)
 
         return string
+        """
+
+        # 3
 
 """
 --- Submission ---
