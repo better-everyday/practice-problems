@@ -9,24 +9,29 @@ The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both cases.
 class Solution:
     def reverseVowels(self, s: str) -> str:
 
-        # 1 List (WIP)
+        # 1 List O(n)
+        """
         s = list(s)
         left, right = 0, -1
         vowels = "aeiouAEIOU"
 
-        count = 0
-        while count < len([i for i in s if i in vowels])//2:
-            while s[left] not in vowels:
+        for x in range(len(s)):
+            if left >= len(s)+right+1:
+                break
+            
+            if not s[left] in vowels:
                 left += 1
-            while s[right] not in vowels:
+                continue
+            if not s[right] in vowels:
                 right -= 1
+                continue
             if s[left] != s[right]:
                 s[left], s[right] = s[right], s[left]
             left += 1
             right -= 1
-            count += 1
-        
+            
         return "".join(s)
+        """
 
         # 2 Adding
         """
@@ -46,11 +51,17 @@ class Solution:
         return string
         """
 
-        # 3
+        # 3 O(logn)
+
 
 """
 --- Submission ---
 
+1.
+Runtime: 55 ms, faster than 92.64% of Python3 online submissions for Reverse Vowels of a String.
+Memory Usage: 15 MB, less than 82.31% of Python3 online submissions for Reverse Vowels of a String.
+
+2.
 Runtime: 117 ms, faster than 27.34% of Python3 online submissions for Reverse Vowels of a String.       O(n)
 Memory Usage: 14.7 MB, less than 93.39% of Python3 online submissions for Reverse Vowels of a String.   O(1)
 """
