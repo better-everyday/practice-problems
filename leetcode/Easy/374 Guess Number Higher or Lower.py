@@ -24,9 +24,9 @@ class Solution:
             mid = (left + right) // 2
             
             if guess(mid) > 0:
-                left = mid
+                left = mid + 1
             elif guess(mid) < 0:
-                right = mid
+                right = mid - 1
             else:
                 return mid
 
