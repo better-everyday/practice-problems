@@ -24,5 +24,6 @@ print(obj.firstUniqChar("aabb"))
 """
 --- Submission ---
 
-
+Runtime: 719 ms, faster than 11.15% of Python3 online submissions for First Unique Character in a String.
+Memory Usage: 14.7 MB, less than 6.52% of Python3 online submissions for First Unique Character in a String.
 """
