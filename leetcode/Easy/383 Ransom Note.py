@@ -9,6 +9,7 @@ Each letter in magazine can only be used once in ransomNote.
 
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+
         magazine = list(magazine)
         for i in ransomNote:
             if i in magazine:
@@ -20,5 +21,6 @@ class Solution:
 """
 --- Submission ---
 
-
+Runtime: 64 ms, faster than 82.60% of Python3 online submissions for Ransom Note.
+Memory Usage: 14.5 MB, less than 5.22% of Python3 online submissions for Ransom Note.
 """
