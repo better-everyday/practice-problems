@@ -30,6 +30,7 @@ class Solution:
         """
 
         # 3
+        """
         x = s
         while len(x) > 0:
             if s.count(x[0]) > 1:
@@ -37,6 +38,22 @@ class Solution:
             else:
                 return s.index(x[0])
         return -1
+        """
+
+        # 4
+        m = math.pow(10,5);     #min
+        
+        for c in alc:
+            try:
+                tmp = s.index(c)
+                tmp2 = s.rindex(c)
+            except: 
+                continue;
+                
+            if tmp == tmp2:
+                m = tmp if tmp<m else m
+                
+        return -1 if m == math.pow(10,5) else m
 
 obj = Solution()
 print(obj.firstUniqChar("aabb"))
@@ -55,4 +72,8 @@ Memory Usage: 14.2 MB, less than 16.77% of Python3 online submissions for First 
 3.
 Runtime: 58 ms, faster than 99.13% of Python3 online submissions for First Unique Character in a String.
 Memory Usage: 14.1 MB, less than 95.37% of Python3 online submissions for First Unique Character in a String.
+
+4.
+Runtime: 30 ms, faster than 99.99% of Python3 online submissions for First Unique Character in a String.
+Memory Usage: 14.2 MB, less than 16.77% of Python3 online submissions for First Unique Character in a String.
 """
