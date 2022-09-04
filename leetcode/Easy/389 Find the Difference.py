@@ -11,10 +11,22 @@ Return the letter that was added to t.
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
         
+        # 1. Counting (Counter method might be better)
+        """
         alpha = "abcdefghijklmnopqrstuvwxyz"
         for letter in alpha:
             if t.count(letter) > s.count(letter):
                 return letter
+        """
+        
+        # 2. Unicode
+        asc,asc1=0,0
+        for i in t:
+            asc=asc+ord(i)
+        for j in s:
+            asc1=asc1+ord(j)
+        asc=asc-asc1
+        return chr(asc)
 
 """
 --- Submission ---
