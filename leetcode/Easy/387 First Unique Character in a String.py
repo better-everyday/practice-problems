@@ -21,10 +21,21 @@ class Solution:
         return -1
         """
 
-        # 2
+        # 2 O(n)
+        """
         for i in s:
-            if s.count(0) == 1:
+            if s.count(i) == 1:
                 return s.index(i)
+        return -1
+        """
+
+        # 3
+        x = s
+        while len(x) > 0:
+            if s.count(x[0]) > 1:
+                x = x.replace(x[0], "")
+            else:
+                return s.index(x[0])
         return -1
 
 obj = Solution()
@@ -40,4 +51,8 @@ Memory Usage: 14.7 MB, less than 6.52% of Python3 online submissions for First U
 2.
 Runtime: 7579 ms, faster than 5.00% of Python3 online submissions for First Unique Character in a String.
 Memory Usage: 14.2 MB, less than 16.77% of Python3 online submissions for First Unique Character in a String.
+
+3.
+Runtime: 58 ms, faster than 99.13% of Python3 online submissions for First Unique Character in a String.
+Memory Usage: 14.1 MB, less than 95.37% of Python3 online submissions for First Unique Character in a String.
 """
