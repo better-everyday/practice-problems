@@ -18,7 +18,7 @@ class Solution:
             if t.count(letter) > s.count(letter):
                 return letter
         """
-        
+
         # 2. Unicode
         asc,asc1=0,0
         for i in t:
@@ -31,6 +31,11 @@ class Solution:
 """
 --- Submission ---
 
+1.
 Runtime: 41 ms, faster than 84.17% of Python3 online submissions for Find the Difference.
 Memory Usage: 13.9 MB, less than 31.96% of Python3 online submissions for Find the Difference.
+
+2.
+Runtime: 40 ms, faster than 86.30% of Python3 online submissions for Find the Difference.
+Memory Usage: 14 MB, less than 31.73% of Python3 online submissions for Find the Difference.
 """
