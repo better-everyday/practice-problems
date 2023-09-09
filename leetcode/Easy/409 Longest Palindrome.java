@@ -1,11 +1,13 @@
-"""
+/* 
 --- Description ---
-
 Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that 
 can be built with those letters.
 
 Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
-"""
+ */
+
+import java.util.HashMap;
+import java.util.Map;
 
 class Solution {
     public int longestPalindrome(String s) {
@@ -38,9 +40,9 @@ class Solution {
     }
 }
 
-"""
+/*
 --- Submission ---
-
+ 
 Runtime: 10 ms, Beats 9.97% of users with Java
 Memory: 43.99 MB, Beats 5.39%of users with Java
-"""
+ */
