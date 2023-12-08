@@ -16,7 +16,7 @@ def preorder_str(root):
 class Solution:
     def tree2str(self, root: Optional[TreeNode]) -> str:
         string = preorder_str(root)
-        print(string)
+
         if root.left == None and root.right == None:
           return str(root.val)
         while "())" in string or ")()" in string:
