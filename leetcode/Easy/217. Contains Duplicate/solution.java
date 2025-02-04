@@ -1,4 +1,8 @@
 // https://leetcode.com/problems/contains-duplicate/submissions/1530403752
+
+import java.util.HashSet;
+import java.util.Set;
+
 class Solution {
     public boolean containsDuplicate(int[] nums) {
 
