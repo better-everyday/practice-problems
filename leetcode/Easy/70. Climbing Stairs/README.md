@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/climbing-stairs/description//">Climbing Stairs</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr>
+<h2><a href="https://leetcode.com/problems/climbing-stairs/description/">Climbing Stairs</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr>
 
 <div class="elfjS" data-track-load="description_content"><p>You are climbing a staircase. It takes <code>n</code> steps to reach the top.</p>
 
